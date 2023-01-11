@@ -26,7 +26,7 @@ class n3ds:
             self.isConsoleOpen
         ] = map(distutils.util.strtobool, list(format(screen_state, '016b'))[::-1])
     
-    def print(self):
+    def p(self):
         print('=======================')
         print('screen on',     self.isConsoleOpen)
         print('=======================')
