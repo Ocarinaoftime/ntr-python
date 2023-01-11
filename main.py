@@ -56,6 +56,8 @@ def main():
     client.send_hello_packet()
     pid = client.set_game_name('screen')
 
+    screen_state = n3ds(client)
+
     display_width = 400
     display_height = 240
 
@@ -69,8 +71,8 @@ def main():
             if event.type == pygame.QUIT:
                 closed = True
 
-
-        new3ds_display.fill(args.background_color)
+        screen_state.update()
+        screen_state.p()
 
 
 if __name__ == "__main__": main()
