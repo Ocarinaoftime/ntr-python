@@ -36,6 +36,8 @@ class InputState:
 			self.button_down,
 			self.button_r,
 			self.button_l,
+			self.button_zr,
+			self.button_zl,
 			self.button_x,
 			self.button_y,
 			_,_,_,_,
@@ -53,6 +55,8 @@ class InputState:
 		print('button_down',  self.button_down)
 		print('button_r',     self.button_r)
 		print('button_l',     self.button_l)
+		print('button_zr',	  self.button_zr)
+		print('button_zl',	  self.button_zl)
 		print('button_x',     self.button_x)
 		print('button_y',     self.button_y)
 		print('circle_x',     self.circle_x)
@@ -147,6 +151,8 @@ if __name__ == '__main__':
 
 		button_rect((  0,   0, 40, 17), input_state.button_l)
 		button_rect((424,   0, 40, 17), input_state.button_r)
+
+		button_rect(( 50,   0, 20, 8.5), input_state.button_l)
 
 		game_display.blit(button_surface, (0,0))
 		pygame.display.update()
